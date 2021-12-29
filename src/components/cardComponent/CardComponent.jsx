@@ -4,20 +4,25 @@ import logo from "../../img/LOGO.png";
 import './cardStyles.css'
 
 const CardComponent = () => {
+  const handleSubmit = () => {
+    console.log();
+  }
   return (
     <div className="container">
       <div className="column1">
-        <h1>Sponsor Now</h1>
-        <p>
-          Join us to spread God's
-          <span>message of Love to His people</span>
-          <span>by sponsoring copies of</span>
-          Now That You Are Born Again!
-        </p>
+        <div className="column-content">
+          <h1>Sponsor Now</h1>
+          <p>
+            Join us to spread God's
+            <span>message of Love to His people</span>
+            <span>by sponsoring copies of</span>
+            Now That You Are Born Again!
+          </p>
+        </div>
       </div>
       <div className="column2">
         <img src={logo} alt="" />
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Full Name" id="fname" name="fname" />
           <br />
           <input type="email" placeholder="Email" id="email" name="email" />

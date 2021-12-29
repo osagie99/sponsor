@@ -13,27 +13,37 @@ span {
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    height: 100vh;
 }
 h1 {
     font-size: 45px;
     color: #fff; 
     font-family: 'DM Sans', sans-serif;
+    padding-left: 1rem;
 }
 p{
     color: #fff;
     font-size:30px;
     line-height: 40px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
+    padding-left: 1rem;
 }
 .column1 {
     width: 50%;
-    padding-left: 10rem;
+    justify-content: center;
     padding-top: 13rem;
     background: url('/src/img/NTYABA012.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 100vh;
+    height: auto;
+    text-align: center;
+    
+}
+
+.column-content {
+    display: inline-block;
     text-align: left;
 }
 img {
@@ -44,7 +54,7 @@ img {
 .column2 {
     width: 50%;
     padding-top: 4rem;
-    height: 100vh;
+    height: auto;
     text-align: center;
 }
 .column2 p {
@@ -82,4 +92,37 @@ button {
 }
 button:hover {
     box-shadow: 0 0 20px rgba(33,33,33,.2); 
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .column1 {
+    padding-top: 30rem;
+    width: 100%;
+    height: auto;
+}
+.column2 {
+    width: 100%;
+
+}
+h1 {
+    text-align: center;
+    
+}
+p {
+    text-align: center;
+}
+}
+@media only screen and (max-width: 330px) {
+.column1 {
+    padding-top: 45rem;
+}
+h1 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
 }
